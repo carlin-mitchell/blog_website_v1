@@ -48,13 +48,7 @@ app.get('/contact', (req, res) => {
 
 // #################################### "/compose" ####################################
 app.get('/compose', (req, res) => {
-<<<<<<< HEAD
-  res.render('compose', {
-    todaysDate: date.getDate(),
-  });
-=======
   res.render('compose', {todaysDate: date.getDate()})
->>>>>>> form-work
 });
 
 app.post('/compose', (req, res) => {

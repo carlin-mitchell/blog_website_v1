@@ -64,6 +64,9 @@ h1 {
     margin-bottom: 10px;
 }
 
+.navbar {
+    flex-shrink: 0;
+}
 
 /* input[type="text"]{
     display: block;

@@ -36,8 +36,9 @@
 
 .post-date{
     display: inline-block;
-    margin-left: 10px;
     font-style: italic;
+    font-size: 12px;
+    margin-left: 10px;
 }
 
 h1 {

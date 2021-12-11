@@ -4,7 +4,8 @@
 <p><%= homeStartingContent %></p> 
 
 <% posts.forEach(post => { %>
-    <h1><%= post.title %> </h1> <p class="post-date">Posted on 12/11/2012</p>
+    <h1><%= post.title %> </h1> 
+    <p class="post-date">Published <%= post.date %></p>
     <p><%= post.body %> </p>
 <% }) %>
 

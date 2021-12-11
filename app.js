@@ -3,9 +3,8 @@ const port = 3000;
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const {
-  redirect
-} = require('express/lib/response');
+const date = require(__dirname + '/local_modules/date.js')
+const {redirect} = require('express/lib/response');
 
 
 const app = express();
@@ -55,7 +54,8 @@ app.get('/compose', (req, res) => {
 app.post('/compose', (req, res) => {
   const post = {
     title: req.body.postTitle,
-    body: req.body.postBody
+    body: req.body.postBody,
+    date: date.getDate(),
   };
   posts.push(post);
   res.redirect('/');

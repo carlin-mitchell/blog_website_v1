@@ -24,6 +24,7 @@ body{
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    flex-shrink: 0;
 }
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
@@ -62,10 +63,6 @@ h1 {
 
 .row {
     margin-bottom: 10px;
-}
-
-.navbar {
-    flex-shrink: 0;
 }
 
 /* input[type="text"]{

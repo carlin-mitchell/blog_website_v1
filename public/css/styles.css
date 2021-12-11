@@ -34,6 +34,16 @@
     color: #fff;
 }
 
+.post-date{
+    display: inline-block;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+h1 {
+    display: inline-block;
+}
+
 /* input[type="text"]{
     display: block;
     width: 100%;

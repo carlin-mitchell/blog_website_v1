@@ -62,7 +62,13 @@ app.post('/compose', (req, res) => {
 });
 
 // #################################### "/post" #######################################
-
+app.get('/posts/:postName', (req, res) => {
+  posts.forEach(post => {
+    if (post.title === req.params.postName) {
+      console.log("Match found!");
+    };
+  });
+});
 
 
 

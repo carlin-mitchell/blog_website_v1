@@ -4,8 +4,9 @@
 
 <form method="post">
     <div class="form-group">
-        <label for="postTitle">Title</label>
+        <label for="postTitle">Title <span class="post-date"><%= todaysDate %></span></label>
         <input class="form-control" type="text" name="postTitle" id="postTitle" autofocus>
+        input.form
         <label for="postBody">Post</label>
         <textarea class="form-control" name="postBody" id="postBody" cols="30" rows="10"></textarea>
     </div>

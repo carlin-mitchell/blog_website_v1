@@ -48,7 +48,9 @@ app.get('/contact', (req, res) => {
 
 // #################################### "/compose" ####################################
 app.get('/compose', (req, res) => {
-  res.render('compose')
+  res.render('compose', {
+    todaysDate: date.getDate(),
+  });
 });
 
 app.post('/compose', (req, res) => {

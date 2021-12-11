@@ -48,14 +48,14 @@ app.get('/contact', (req, res) => {
 
 // #################################### "/compose" ####################################
 app.get('/compose', (req, res) => {
-  res.render('compose')
+  res.render('compose', {todaysDate: date.getDate()})
 });
 
 app.post('/compose', (req, res) => {
   const post = {
     title: req.body.postTitle,
     body: req.body.postBody,
-    date: date.getDate(),
+    date: req.body.date ? "Published " + req.body.date: "",
   };
   posts.push(post);
   res.redirect('/');

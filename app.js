@@ -3,7 +3,8 @@ const port = 3000;
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const date = require(__dirname + '/local_modules/date.js')
+const date = require(__dirname + '/local_modules/date.js');
+const _ = require('lodash'); 
 const {redirect} = require('express/lib/response');
 
 
@@ -63,8 +64,10 @@ app.post('/compose', (req, res) => {
 // #################################### "/post" #######################################
 app.get('/posts/:postName', (req, res) => {
   posts.forEach(post => {
-    if (post.title === req.params.postName) {
+    if (_.lowerCase(post.title) === _.lowerCase(req.params.postName)) {
       console.log("Match found!");
+    } else {
+      console.log("No Match found!");
     };
   });
 });

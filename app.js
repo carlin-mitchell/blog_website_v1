@@ -63,19 +63,18 @@ app.post('/compose', (req, res) => {
 
 // #################################### "/post" #######################################
 app.get('/posts/:postName', (req, res) => {
+  let requestedTitle = _.lowerCase(req.params.postName);
   posts.forEach(post => {
-    if (_.lowerCase(post.title) === _.lowerCase(req.params.postName)) {
-      console.log("Match found!");
-    } else {
-      console.log("No Match found!");
-    };
+    let storedTitle = _.lowerCase(post.title);
+    if (requestedTitle === storedTitle) {
+      res.render('post', {
+        title: post.title,
+        body: post.body,
+        date: post.date,
+      });
+    }; 
   });
 });
-
-
-
-
-
 
 
 // #################################### app.listen() ##################################

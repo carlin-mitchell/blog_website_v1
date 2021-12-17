@@ -79,5 +79,5 @@ app.get('/posts/:postName', (req, res) => {
 
 // #################################### app.listen() ##################################
 app.listen(port, function () {
-  console.log("Server started on port " + port);
+  console.log('Server started on port ' + port);
 });
